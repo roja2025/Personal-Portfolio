@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e1bee7); /* Teal to Light Purple */
+  color: #333;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h5{
+  padding-left: 235px;
+
+}
+
+
+header {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 20px;
+  text-align: left;
+  animation: fadeIn 2s ease-in;
+}
+
+p {
+  text-indent: 1%;
+}
+
+h1 {
+  text-indent: 1%;
+  font-size: 26px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #283593;
+  padding: 10px 0;
+  lighting-color: #8f075d90;
+  position: sticky; top: 0;
+  backdrop-filter: blur(45px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc80;
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  animation: fadeIn 1.2s ease;
+}
+
+h2 {
+  color: #1a237e;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a237e;
+  color: white;
+  margin-top: 40px;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-left: 85%;
+}
+
+.resume-btn:hover {
+  background-color: #e65c00;
+}
+
+.education {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skills ul {
+  padding-left: 20px;
+}
+
+.skills li {
+  margin-bottom: 8px;
+}
+#contact {
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #0d47a1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  color: #ff6600;
+}
+
+.theme-switch {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.theme-switch::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+  background-color: #0c0b0b;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+#theme-toggle:checked + .theme-switch {
+  background-color: #fafafb;
+  
+}
+#theme-toggle:checked + .theme-switch::before {
+  transform: translateX(26px);
+}
+
+body:has(#theme-toggle:checked) {
+  background-color: #ae0e0e;
+  color: #e0e0e0;
+}
+
+body:has(#theme-toggle:checked) header {
+  background: linear-gradient(to right, #373179ba, #326f41);
+  
+}
+
+body:has(#theme-toggle:checked) section {
+  background: linear-gradient(to left, #06060690, #34682f, #78b8539f);
+  color: #f5f5f5;
+  max-width: 1500px; 
+}
+
+body:has(#theme-toggle:checked) .card {
+  background-color: #ffffff26;
+  color: #191818;
+}
+
+body:has(#theme-toggle:checked) .resume-btn {
+  background-color: #ff9800;
+}
+
+body:has(#theme-toggle:checked) .resume-btn:hover {
+  background-color: #e65100;
+}
+
+body:has(#theme-toggle:checked) nav {
+  background-color: #0d47a1;
+}
+
+
+body:has(#theme-toggle:checked) nav a {
+  color: #ffffff;
+
+}
+body:has(#theme-toggle:checked) #contact {
+  
+  color: #0b0b0b;
+  background: linear-gradient(to left, #06060690, #34682f, #78b8539f);
+   margin-top: 30px;
+
+}
+
+body:has(#theme-toggle:checked) .contact-info a {
+  color: #0b0b0b;
+}
+body:has(#theme-toggle:checked) .contact-info a:hover {
+  color: #004de6;
+}
